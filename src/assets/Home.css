@@ -1,0 +1,139 @@
+/* Ensure the body or main container has some padding/margin */
+.home-container {
+    padding: 20px;
+    font-family: Arial, sans-serif; /* Optional: for better font readability */
+    text-align: left; /* Align text to the left */
+  }
+  
+  /* Styling for the title */
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Styling for the intro paragraph */
+  .intro-text {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.6; /* Adjust line height for readability */
+  }
+  
+  /* Styling for the subheading */
+  .subheading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  
+  /* Styling for the unordered list */
+  .operation-list {
+    list-style-type: disc;
+    padding-left: 20px; /* Indent the list items slightly */
+  }
+  
+  /* Styling for each list item */
+  .operation-list li {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+  
+  /* Styling for the code block */
+  .code-block {
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    overflow-x: auto; /* Make the code block scrollable horizontally if it's too wide */
+    white-space: pre-wrap; /* Ensure code wraps if it's too long */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+  }
+  
+  /* Styling for the code description paragraph */
+  .code-description {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
+/* Styling for the output screen */
+.output-screen {
+    background-color: #333;
+    color: #f4f4f4;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    white-space: pre-wrap; /* Ensures proper formatting of multiline output */
+    border: 1px solid #555;
+    font-size: 1rem;
+  }
+    
+  /* Style for the logo */
+.logo img {
+  width: 200px;
+  height: auto;
+}
+
+/* Style for the search input container */
+.search {
+  margin-top: -5px;/* Adjust spacing between the logo and the search bar */
+  text-align: center; /* Center the search bar */
+}
+
+/* Style for the search input field */
+.search input {
+  padding: 8px;
+  font-size: 16px;
+  width: 250px; /* Set a fixed width or adjust as needed */
+  border: 2px solid #ccc; /* Light gray border */
+  border-radius: 4px; /* Rounded corners */
+  outline: none;
+}
+
+/* Focus effect on the search input */
+.search input:focus {
+  border-color: #007BFF; /* Change border color on focus */
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;  /* Align horizontally */
+  align-items: center;      /* Align vertically (optional, if you want to center vertically) */
+  height: 100vh;            /* Ensures the container takes full height of the screen */
+}
+
+.start-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+/* Add your CSS for the buttons */
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.back-button, .next-button {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.back-button:hover, .next-button:hover {
+  background-color: #007BFF;
+}
+.subheading {
+  font-size: 1.5rem;
+  color: #007BFF;
+  margin-top: 20px;
+}

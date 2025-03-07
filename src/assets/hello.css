@@ -1,0 +1,26 @@
+.start-coding-journey {
+  background-color: #f7f7f7; /* Light background color */
+  padding: 30px 0; /* Vertical padding for spacing */
+  text-align: center; /* Center align the text */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  margin-top: 20px; /* Add space above this section */
+}
+
+.start-coding-journey h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333; /* Dark text color */
+  margin-bottom: 20px; /* Add spacing below the heading */
+}
+
+.start-button {
+  background-color: #007BFF; /* Button background color */
+  color: #fff; /* White text color */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+.start-button:hover {
+  background-color: #0056b3; /* Darker blue when hovered */
+}
