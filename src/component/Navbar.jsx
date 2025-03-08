@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../logo.png'; // Assuming you have a logo image
-
+import './assets/nav.css';
 const Navbar = () => {
   // Get the current location
   const location = useLocation();
