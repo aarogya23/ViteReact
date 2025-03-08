@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../logo.png'; // Assuming you have a logo image
-import './assets/nav.css';
+
 const Navbar = () => {
   // Get the current location
   const location = useLocation();
@@ -53,7 +53,7 @@ const Navbar = () => {
       {/* Conditionally render the "Start Your Coding Journey" Section */}
       {/* Only render it if the current page is not Home, About, Contact, Learn, Tree, or Tower of Hanoi */}
       {!isHomePage && !isContactPage && !isAboutPage && !isLearnPage && !isTreePage && !isLoginPage && !isRegisterPage && !isRecursionPage && !isTowerOfHanoiPage && (
-        <div className="start-coding-journey">
+        <div className="start-coding-journey" style={{marginTop : '150px'}}>
           <h2>Start Your Coding Journey</h2>
           <Link to="/learn-categories">
             <div className="button-container">

@@ -137,3 +137,115 @@
   color: #007BFF;
   margin-top: 20px;
 }
+
+/* General Navbar Styles */
+.navbar-container {
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+}
+
+.logo img {
+  width: 150px;
+  height: auto;
+}
+
+.search input {
+  padding: 8px;
+  font-size: 16px;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+}
+
+.nav-item {
+  margin-right: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+.nav-container {
+  display: flex;
+}
+
+/* Button Container */
+.button-container {
+  margin-top: 20px;
+}
+
+.category-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.category-button:hover {
+  background-color: #45a049;
+}
+
+/* Responsive Styles */
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .nav-item {
+    margin: 10px 0;
+  }
+
+  .search input {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .start-coding-journey {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .category-button {
+    width: 100%;
+  }
+}
+
+/* Tablets and Larger Mobile Screens */
+@media (max-width: 1024px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .nav-list {
+    flex-direction: row;
+  }
+
+  .search input {
+    width: 150px;
+    margin-top: 0;
+  }
+}
