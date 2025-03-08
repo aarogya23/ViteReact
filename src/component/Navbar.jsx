@@ -6,7 +6,7 @@ const Navbar = () => {
   // Get the current location
   const location = useLocation();
 
-  // Check if the current route is '/home', '/contact', '/about', '/learn-categories', '/tree', or '/tower-of-hanoi'
+  // Check if the current route is one of the specified pages
   const isHomePage = location.pathname === '/home';
   const isContactPage = location.pathname === '/contact';
   const isAboutPage = location.pathname === '/about';
@@ -16,6 +16,7 @@ const Navbar = () => {
   const isRegisterPage = location.pathname === '/register';
   const isRecursionPage = location.pathname === '/recursion';
   const isTowerOfHanoiPage = location.pathname === '/tower-of-hanoi'; // Check if it's the /tower-of-hanoi page
+  const isDatabasePage = location.pathname === '/database'; // Check if it's the /database page
 
   return (
     <div>
@@ -51,8 +52,8 @@ const Navbar = () => {
       </div>
 
       {/* Conditionally render the "Start Your Coding Journey" Section */}
-      {/* Only render it if the current page is not Home, About, Contact, Learn, Tree, or Tower of Hanoi */}
-      {!isHomePage && !isContactPage && !isAboutPage && !isLearnPage && !isTreePage && !isLoginPage && !isRegisterPage && !isRecursionPage && !isTowerOfHanoiPage && (
+      {/* Exclude it on the database page */}
+      {!isHomePage && !isContactPage && !isAboutPage && !isLearnPage && !isTreePage && !isLoginPage && !isRegisterPage && !isRecursionPage && !isTowerOfHanoiPage && !isDatabasePage && (
         <div className="start-coding-journey" style={{marginTop : '150px'}}>
           <h2>Start Your Coding Journey</h2>
           <Link to="/learn-categories">

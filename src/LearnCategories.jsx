@@ -59,7 +59,7 @@ const LearnCategories = () => {
         <div className="topic-box">
           <h2>Database</h2>
           <p>Learn the fundamentals of database systems, including SQL, NoSQL, and how to manage data in modern applications.</p>
-          <Link to="/backend">
+          <Link to="/database">
             <button className="category-button">Start Learning</button>
           </Link>
         </div>

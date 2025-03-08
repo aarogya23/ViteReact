@@ -11,6 +11,7 @@ import Tree from './Tree'; // Import the Tree component
 import Login from './Login.jsx'; // Import the Login component
 import Recursion from "./Recursion";
 import TowerOfHanoi from './TowerOfHanoi';
+import Database from './Database';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             <Route path="/login" element={<Login />} /> {/* Login page */}
             <Route path="/recursion" element={<Recursion />} /> {/* Recursion page */}
             <Route path="/tower-of-hanoi" element={<TowerOfHanoi />} />
+            <Route path="/database" element={<Database />} /> 
           </Routes>
         </div>
       </div>
