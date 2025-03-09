@@ -79,6 +79,7 @@
   .categories-container {
     width: 90%; /* Full width for mobile */
     margin: 30px auto; /* Reduce margin for better mobile alignment */
+    margin-right: 10px;
   }
 
   .topics-container {
