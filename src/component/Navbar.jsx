@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../logo.png'; // Assuming you have a logo image
+import './style.css'; // Importing the CSS file
 
-import './style.css';
 const Navbar = () => {
   const location = useLocation();
 
