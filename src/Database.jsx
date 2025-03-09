@@ -9,7 +9,7 @@ const Database = () => {
   };
 
   return (
-    <div className="database-container">
+    <div className="database-container" style={{padding :'10px'}}>
       <h2 className="title">Database Topics</h2>
 
       {/* Database Section */}
