@@ -29,7 +29,7 @@ const TowerOfHanoi = () => {
   };
 
   const handleNext = () => {
-    navigate('/recursion'); // Ensure this path matches the route for recursion.jsx
+    navigate('/mcq'); // Ensure this path matches the route for recursion.jsx
   };
 
   return (

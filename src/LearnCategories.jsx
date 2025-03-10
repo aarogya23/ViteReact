@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './assets/LearnCategories.css'; // Importing external CSS file
+import Footer from './component/Footer';
 
 const LearnCategories = () => {
   return (
+    <div>
     <div className="categories-container">
       <h1>Choose Your Learning Path</h1>
       
@@ -64,6 +66,8 @@ const LearnCategories = () => {
           </Link>
         </div>
       </div>
+    </div>
+    <Footer />
     </div>
   );
 };

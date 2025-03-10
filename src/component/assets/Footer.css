@@ -1,0 +1,115 @@
+/* Container that ensures the footer stays at the bottom */
+.footer-container {
+  width: 100%; /* Changed from 90rem to 100% for better responsiveness */
+  background-color: #333; /* Dark background color for footer */
+  color: white;
+  padding: 20px 0; /* Add padding to the top and bottom */
+  position: relative;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  box-sizing: border-box; /* Ensure padding doesn't affect the overall width */
+}
+
+/* Ensures that the footer will appear at the bottom if content is not enough */
+.footer-content {
+  padding: 10px;
+}
+
+/* Footer description */
+.footer-description {
+  font-size: 14px;
+  margin: 10px 0;
+  color: #ddd; /* Light gray text for description */
+}
+
+/* Footer links */
+.footer-links a {
+  color: #ddd; /* Link color */
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+  color: #fff; /* Hover effect */
+}
+
+/* Footer social media icons */
+.footer-socials {
+  margin-top: 20px; /* Adds spacing from the description */
+}
+
+.footer-socials a {
+  font-size: 24px;
+  margin: 0 15px;
+  color: #ddd; /* Light gray color for icons */
+  transition: color 0.3s;
+}
+
+.footer-socials a:hover {
+  color: #fff; /* Change color on hover */
+}
+
+/* Responsive design: Adjustments for mobile screens */
+@media (max-width: 1024px) {
+  .footer-container {
+    width: 100%;
+    padding: 15px 0; /* Slightly reduce padding on medium screens */
+  }
+
+  .footer-links a {
+    margin: 0 8px; /* Reduced margin for better layout on tablets */
+  }
+
+  .footer-socials a {
+    font-size: 22px; /* Smaller icon size on tablets */
+    margin: 0 12px; /* Adjusted spacing for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    padding: 10px 0; /* Reduced padding for smaller screens */
+  }
+
+  .footer-links a {
+    display: block;
+    margin: 10px 0; /* Stack links vertically with margins on mobile */
+  }
+
+  .footer-socials {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center; /* Center the social media icons on mobile */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  }
+
+  .footer-socials a {
+    font-size: 20px; /* Smaller icons for mobile */
+    margin: 10px 12px; /* Adjust spacing for mobile */
+  }
+
+  .footer-description {
+    font-size: 12px; /* Reduce font size of the description for small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 8px 0; /* Further reduced padding for small mobile screens */
+  }
+
+  .footer-description {
+    font-size: 10px; /* Even smaller text for very small screens */
+  }
+
+  .footer-links a {
+    margin: 5px 0; /* Tighter spacing between footer links on very small screens */
+  }
+
+  .footer-socials a {
+    font-size: 18px; /* Even smaller icons */
+    margin: 8px 10px; /* Adjust spacing for very small screens */
+  }
+}

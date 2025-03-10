@@ -79,13 +79,14 @@
   .categories-container {
     width: 90%; /* Full width for mobile */
     margin: 30px auto; /* Reduce margin for better mobile alignment */
-    margin-right: 10px;
+    margin-right: 100px ;
   }
 
   .topics-container {
     flex-direction: column; /* Stack topics vertically on mobile */
     align-items: center;
     gap: 20px; /* Increase gap between stacked items */
+    margin-right: 20px;
   }
 
   .topic-box {

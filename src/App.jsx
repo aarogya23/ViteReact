@@ -12,6 +12,7 @@ import Login from './Login.jsx'; // Import the Login component
 import Recursion from "./Recursion";
 import TowerOfHanoi from './TowerOfHanoi';
 import Database from './Database';
+import DSAMCQs from './DSAMCQs';  // The new MCQ page
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
             <Route path="/recursion" element={<Recursion />} /> {/* Recursion page */}
             <Route path="/tower-of-hanoi" element={<TowerOfHanoi />} />
             <Route path="/database" element={<Database />} /> 
+            <Route path="/mcq" element={<DSAMCQs />} />  {/* New route for MCQs */}
           </Routes>
         </div>
       </div>
