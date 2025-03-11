@@ -1,55 +1,69 @@
-body {
-  background-color: #ffffff;
-  font-family: Arial, sans-serif;
-}
+
 
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
+  
 }
 
 .login-box {
-  background-color: #ffffff;
-  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+  background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(36, 36, 36, 0.1);
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.google-logo {
   text-align: center;
-  color: rgb(0, 0, 0);
+  margin-bottom: 20px;
 }
 
-.google-logo img {
-  width: 50px;
-  margin-bottom: 10px;
-}
-
-h2 {
-  margin: 10px 0;
-  font-size: 24px;
-}
-
-p {
-  color: #090909;
-  font-size: 14px;
-}
-
-.input-group input {
+input {
   width: 100%;
   padding: 12px;
-  border: 1px solid #dcdcdc;
-  border-radius: 4px;
-  background-color: #b2b2b3;
-  color: rgb(0, 0, 0);
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
   font-size: 16px;
-  margin-top: 10px;
 }
 
-.forgot-email,
-.guest-mode a {
-  color: #8ab4f8;
+.input-group {
+  margin-bottom: 20px;
+}
+
+.forgot-email {
+  text-align: right;
   font-size: 14px;
+  color: #555;
   cursor: pointer;
+}
+
+.guest-mode {
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+}
+
+.guest-mode a {
+  text-decoration: none;
+  color: #1a73e8;
 }
 
 .button-group {
@@ -59,21 +73,47 @@ p {
 }
 
 .create-account {
-  background: none;
-  border: none;
-  color: #8ab4f8;
+  background-color: #f1f3f4;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 5px;
   cursor: pointer;
+}
+
+.create-account:hover {
+  background-color: #e8e9eb;
 }
 
 .next-button {
   background-color: #1a73e8;
-  border: none;
   color: white;
-  padding: 10px 20px;
+  padding: 12px 20px;
+  border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
 .next-button:hover {
-  background-color: #1669c1;
+  background-color: #0c56d3;
+}
+
+@media (max-width: 600px) {
+  .login-box {
+    padding: 20px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .create-account {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .next-button {
+    width: 100%;
+  }
 }

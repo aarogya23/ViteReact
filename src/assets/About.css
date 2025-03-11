@@ -1,37 +1,68 @@
 /* About.css */
-.about-container {
-  padding: 20px;
-  font-family: Arial, sans-serif;
-}
 
-h2 {
-  font-size: 2rem;
-  font-weight: bold;
+/* Container for the entire About section */
+.about-container {
+  padding: 40px;
+  max-width: 1200px; /* Limiting width for larger screens */
+  margin: 0 auto;
   text-align: center;
 }
 
+/* Heading for the About section */
+.about-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Content area for text and image */
 .about-content {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  align-items: center;
+  gap: 30px;
   margin-top: 20px;
 }
 
+/* Style for the image */
 .about-image {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%; /* Make the image circular */
-  object-fit: cover; /* Ensures the image covers the space without distortion */
-  border: 2px solid #ddd;
+  width: 250px; /* Increase the image width */
+  height: 250px; /* Set fixed height to maintain aspect ratio */
+  object-fit: cover; /* Crop the image to fill the container */
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease; /* Add hover effect for image */
 }
 
+.about-image:hover {
+  transform: scale(1.1); /* Image zoom effect on hover */
+}
+
+/* Text area for the description */
 .about-text {
-  max-width: 600px;
-  font-size: 1.2rem;
+  max-width: 600px; /* Set max-width for better readability */
+  text-align: left;
+  font-size: 1.1rem;
+  color: #555;
   line-height: 1.6;
 }
 
-.about-text p {
-  margin-bottom: 20px;
+/* Adjusting for responsiveness on smaller screens */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-image {
+    width: 200px; /* Make image slightly smaller on smaller screens */
+    height: 200px;
+  }
+
+  .about-text {
+    font-size: 1rem;
+  }
 }
+

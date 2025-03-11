@@ -114,4 +114,35 @@
     }
   }
   
+  .start-coding-journey {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Centers horizontally */
+    justify-content: center;  /* Centers vertically */
+    text-align: center;  /* Centers text */
+    margin-top: 150px;  /* Adjusted margin for top spacing */
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;  /* Centers button container */
+    align-items: center;
+  }
+  
+  .category-button {
+    margin-top: 20px;  /* Adjust button spacing if necessary */
+    height: 50px;
+    width: auto;  /* Ensure the width adjusts according to text */
+    padding: 0 20px;  /* Padding for button size */
+    font-size: 16px;  /* Optional: to ensure text is readable */
+    cursor: pointer;  /* To indicate it's clickable */
+    border: none;  /* Optional: remove default button border */
+    background-color: #4CAF50;  /* Optional: button background color */
+    color: white;  /* Optional: button text color */
+    border-radius: 5px;  /* Optional: rounded corners */
+  }
+  
+  .category-button:hover {
+    background-color: #45a049;  /* Optional: button hover effect */
+  }
   

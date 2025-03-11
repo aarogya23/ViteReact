@@ -1,102 +1,246 @@
-/* Categories container */
+/* assets/LearnCategories.css */
+
 .categories-container {
-  text-align: center;
   padding: 20px;
-  background-color: #f0f0f0;
-  border-radius: 10px;
-  width: 70%;
-  margin: 50px auto;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-/* Topics container */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.scrolling-container {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+}
+
+.topics-wrapper {
+  display: flex;
+  width: max-content;
+  animation: scrollLeft 10s linear infinite;
+}
+
 .topics-container {
   display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
-  flex-wrap: wrap; /* Allow items to wrap onto new lines */
 }
 
-/* Topic box styling */
+@keyframes scrollLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 .topic-box {
-  background-color: white;
+  width: 280px;
   padding: 20px;
-  border-radius: 10px;
-  width: 250px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
   text-align: center;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px; /* Space between boxes */
+  background-color: #f4f4f4;
+  margin-right: 20px;
+  display: inline-block;
+  white-space: normal;
 }
 
-/* Topic box heading */
-.topic-box h2 {
-  margin-bottom: 15px;
-  font-size: 20px;
-}
-
-/* Category button styling */
+/* Button style */
 .category-button {
-  padding: 12px 24px;
-  font-size: 16px;
+  padding: 10px 20px;
   background-color: #007BFF;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
-  transition: 0.3s;
 }
 
-/* Button hover effect */
 .category-button:hover {
   background-color: #0056b3;
 }
 
-/* Responsive Design */
+.category-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
 
-/* Medium screens (tablets) */
+/* Style for each course box */
+.topic-box {
+  text-align: center;
+  
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  width: 300px;
+  height: 350px; /* Set fixed height */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Start with the top content */
+  align-items: center;
+  background-color: #fff;
+}
+
+/* Increase the size of the container when hovered */
+.topic-box:hover {
+  transform: scale(1.1); /* Enlarge the container */
+  height: 400px; /* Enlarge the container more */
+}
+
+/* Style for the image */
+.category-image {
+  width: 100%;
+  height: 50%; /* Image takes half of the container */
+  object-fit: cover;
+  border-radius: 8px;
+  position: relative; /* To position the hover text inside it */
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect for image */
+.topic-box:hover .category-image {
+  transform: scale(1.05); /* Slight zoom-in effect on image */
+}
+
+/* Hidden hover text initially */
+.hover-text {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.7);
+  margin-top: -5rem;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  position: absolute; /* Position the text inside the image container */
+  top: 50%; /* Center vertically within the image */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center horizontally and vertically */
+  width: 80%; /* Ensure the text box doesn’t go out of bounds */
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Display hover text when hovering over the course box */
+.topic-box:hover .hover-text {
+  display: block;
+  opacity: 1;
+}
+
+/* Style for the category button */
+.category-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: auto; /* Push the button to the bottom of the box */
+  transition: background-color 0.3s ease;
+}
+
+.category-button:hover {
+  background-color: #0056b3;
+}
+
+/* Styling for the search box container */
+.search-container {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Styling for the search input field */
+.search-box {
+  padding: 10px;
+  width: 300px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border 0.3s ease, color 0.3s ease;
+  outline: none;
+  position: relative; /* Needed for text positioning */
+}
+
+/* Styling for the placeholder text */
+.search-box::placeholder {
+  color: #aaa;
+  position: absolute; /* Position placeholder text */
+  top: 50%; /* Start at the center of the input */
+  left: 10px; /* Offset from the left */
+  transform: translateY(-50%); /* Center vertically */
+  transition: all 0.3s ease; /* Smooth transition for movement */
+}
+
+/* Hover effect: Move the placeholder text up when the input is hovered */
+.search-box:hover::placeholder {
+  top: 5px; /* Move the placeholder up */
+  font-size: 12px; /* Reduce the font size */
+  color: #007BFF; /* Change color to blue */
+}
+
+/* Focus effect: Move the placeholder text up and shrink font size */
+.search-box:focus::placeholder {
+  top: 5px;
+  font-size: 12px;
+  color: #007BFF; /* Change color to blue */
+}
+
+
 @media (max-width: 768px) {
   .categories-container {
-    width: 85%; /* Increase container width for tablets */
+    width: 100%; /* Container width will be 90% on tablets */
   }
 
   .topics-container {
-    gap: 15px;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+  }
+
+  .search-box {
+    width: 90%;
   }
 
   .topic-box {
-    width: 220px; /* Adjust topic box width */
+    width: 200px; /* smaller topic boxes */
+    padding: 15px;
   }
 
   .category-button {
-    font-size: 14px; /* Slightly smaller font for buttons on tablets */
-    padding: 10px 20px;
+    width: 110%;
+    font-size: 14px;
   }
 }
 
-/* Small screens (mobile) */
 @media (max-width: 480px) {
   .categories-container {
-    width: 90%; /* Full width for mobile */
-    margin: 30px auto; /* Reduce margin for better mobile alignment */
-    margin-right: 100px ;
+    width: 120%; /* Container width will be 95% on small screens */
+    padding: 10px; /* Less padding on smaller screens */
   }
 
   .topics-container {
-    flex-direction: column; /* Stack topics vertically on mobile */
-    align-items: center;
-    gap: 20px; /* Increase gap between stacked items */
-    margin-right: 20px;
+    grid-template-columns: 1fr; /* 1 column on small screens */
+  }
+
+  .search-box {
+    width: 100%;
   }
 
   .topic-box {
-    width: 100%; /* Full width for mobile */
-    max-width: 350px; /* Max width to keep them manageable */
-    padding: 15px; /* Reduce padding on mobile */
+    width: 100%; /* topic box takes full width */
+    padding: 10px;
   }
 
   .category-button {
-    font-size: 14px; /* Slightly smaller font size for mobile */
-    padding: 10px 20px;
+    width: 100%;
+    font-size: 14px;
   }
 }

@@ -1,73 +1,118 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './assets/LearnCategories.css'; // Importing external CSS file
 import Footer from './component/Footer';
 
+// Import images for each category
+import dsaImage from './dsa.png';
+import frontendImage from './frontend.jpg';
+import backendImage from './backend.jpg';
+import uiuxImage from './ui.jpg';
+import aiMlImage from './aiml.jpg';
+import databaseImage from './database.jpg';
+
 const LearnCategories = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+
+  // Array of topics with their details
+  const topics = [
+    {
+      name: 'Data Structures & Algorithms',
+      description: 'Master essential algorithms and data structures to solve complex problems and ace coding interviews.',
+      image: dsaImage,
+      link: '/home'
+    },
+    {
+      name: 'Frontend Development',
+      description: 'Learn the core concepts of web development, including HTML, CSS, JavaScript, and modern frontend frameworks like React.',
+      image: frontendImage,
+      link: '/frontend'
+    },
+    {
+      name: 'Backend Development',
+      description: 'Explore server-side development with technologies like Servlet, SpringBoot, databases, and API creation.',
+      image: backendImage,
+      link: '/backend'
+    },
+    {
+      name: 'UI/UX Design',
+      description: 'Understand the principles of user interface and experience design to create intuitive and visually appealing websites and apps.',
+      image: uiuxImage,
+      link: '/home'
+    },
+    {
+      name: 'AI/ML',
+      description: 'Dive into Artificial Intelligence and Machine Learning concepts to build smart applications using data-driven approaches.',
+      image: aiMlImage,
+      link: '/frontend'
+    },
+    {
+      name: 'Database',
+      description: 'Learn the fundamentals of database systems, including SQL, NoSQL, and how to manage data in modern applications.',
+      image: databaseImage,
+      link: '/database'
+    }
+  ];
+
+  // Filter topics based on search query
+  const filteredTopics = topics.filter(topic =>
+    topic.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <div>
-    <div className="categories-container">
-      <h1>Choose Your Learning Path</h1>
-      
-      <div className="topics-container">
-        {/* DSA Box */}
-        <div className="topic-box">
-          <h2>Data Structures & Algorithms</h2>
-          <p>Master essential algorithms and data structures to solve complex problems and ace coding interviews.</p>
-          <Link to="/home">
-            <button className="category-button">Start Learning</button>
-          </Link>
+      <div className="categories-container">
+        <h1>Choose Your Learning Path</h1>
+
+        {/* Search box */}
+        <div className="search-container">
+          <input
+            type="text"
+            placeholder="Search for a topic..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="search-box"
+          />
         </div>
 
-        {/* Frontend Box */}
-        <div className="topic-box">
-          <h2>Frontend Development</h2>
-          <p>Learn the core concepts of web development, including HTML, CSS, JavaScript, and modern frontend frameworks like React.</p>
-          <Link to="/frontend">
-            <button className="category-button">Start Learning</button>
-          </Link>
-        </div>
+        <div className="scrolling-container">
+          <div className="topics-wrapper">
+            <div className="topics-container">
+              {/* Render filtered topics */}
+              {filteredTopics.map((topic, index) => (
+                <div className="topic-box" key={index}>
+                  <img src={topic.image} alt={topic.name} className="category-image" />
+                  <h2>{topic.name}</h2>
+                  <div className="hover-text">
+                    <p>{topic.description}</p>
+                  </div>
+                  <Link to={topic.link}>
+                    <button className="category-button">Start Learning</button>
+                  </Link>
+                </div>
+              ))}
+            </div>
 
-        {/* Backend Box */}
-        <div className="topic-box">
-          <h2>Backend Development</h2>
-          <p>Explore server-side development with technologies like Servlet, SpringBoot, databases, and API creation.</p>
-          <Link to="/backend">
-            <button className="category-button">Start Learning</button>
-          </Link>
+            {/* Duplicate content for seamless scrolling */}
+            <div className="topics-container">
+              {filteredTopics.map((topic, index) => (
+                <div className="topic-box" key={index}>
+                  <img src={topic.image} alt={topic.name} className="category-image" />
+                  <h2>{topic.name}</h2>
+                  <div className="hover-text">
+                    <p>{topic.description}</p>
+                  </div>
+                  <Link to={topic.link}>
+                    <button className="category-button">Start Learning</button>
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
 
-      <div className="topics-container">
-        {/* UI/UX Box */}
-        <div className="topic-box">
-          <h2>UI/UX Design</h2>
-          <p>Understand the principles of user interface and experience design to create intuitive and visually appealing websites and apps.</p>
-          <Link to="/home">
-            <button className="category-button">Start Learning</button>
-          </Link>
-        </div>
-
-        {/* AI/ML Box */}
-        <div className="topic-box">
-          <h2>AI/ML</h2>
-          <p>Dive into Artificial Intelligence and Machine Learning concepts to build smart applications using data-driven approaches.</p>
-          <Link to="/frontend">
-            <button className="category-button">Start Learning</button>
-          </Link>
-        </div>
-
-        {/* Database Box */}
-        <div className="topic-box">
-          <h2>Database</h2>
-          <p>Learn the fundamentals of database systems, including SQL, NoSQL, and how to manage data in modern applications.</p>
-          <Link to="/database">
-            <button className="category-button">Start Learning</button>
-          </Link>
-        </div>
-      </div>
-    </div>
-    <Footer />
+      <Footer />
     </div>
   );
 };

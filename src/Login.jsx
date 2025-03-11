@@ -44,10 +44,7 @@ const Login = () => {
             />
           </div>
           <p className="forgot-email">Forgot email?</p>
-          <p className="guest-mode">
-            Not your computer? Use Guest mode to sign in privately.{" "}
-            <a href="#">Learn more about using Guest mode</a>
-          </p>
+          
           <div className="button-group">
             <button type="button" className="create-account">Create account</button>
             <button type="submit" className="next-button">Next</button>
