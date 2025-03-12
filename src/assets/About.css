@@ -27,8 +27,8 @@
 
 /* Style for the image */
 .about-image {
-  width: 250px; /* Increase the image width */
-  height: 250px; /* Set fixed height to maintain aspect ratio */
+  width: 350px; /* Increase the image width */
+  height: 350px; /* Set fixed height to maintain aspect ratio */
   object-fit: cover; /* Crop the image to fill the container */
   border-radius: 50%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -66,3 +66,45 @@
   }
 }
 
+/* In About.css */
+.react-section {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+}
+
+.react-section h3 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.react-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.react-text {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.react-text p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.react-image {
+  width: 350px; /* Increase the image width */
+  height: 350px; /* Set fixed height to maintain aspect ratio */
+  object-fit: cover; /* Crop the image to fill the container */
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease; /* Add hover effect for image */
+}
+
+.react-image:hover {
+  transform: scale(1.1); /* Image zoom effect on hover */
+}

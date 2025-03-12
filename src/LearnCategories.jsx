@@ -61,6 +61,7 @@ const LearnCategories = () => {
 
   return (
     <div>
+  
       <div className="categories-container">
         <h1>Choose Your Learning Path</h1>
 
