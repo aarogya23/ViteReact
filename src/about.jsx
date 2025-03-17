@@ -1,9 +1,9 @@
 // src/About.js
 import React from 'react';
 import './assets/About.css'; // Import CSS for styling
-import brandImage from './brand.png'; // Import your brand image
-import myImage from './image4.jpg'; // Import your main image
-import reactImage from './react.jpeg'; // Import your React-related image
+import brandImage from './assets/brand.png'; // Import your brand image
+import myImage from './assets/image4.jpg'; // Import your main image
+import reactImage from './assets/react.jpeg'; // Import your React-related image
 import Footer from './component/Footer';
 
 const About = () => {

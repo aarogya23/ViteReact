@@ -1,6 +1,6 @@
 import React from "react";
 import "./ContactPage.css"; // Import CSS file
-import contactImage from "./contact.jpg"; // Import the image
+import contactImage from "./Contact.jpg"; // Import the image
 import { FaGithub, FaFacebook, FaInstagram } from 'react-icons/fa'; // Import necessary icons
 
 const ContactPage = () => {

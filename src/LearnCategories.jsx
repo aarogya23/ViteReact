@@ -4,12 +4,12 @@ import './assets/LearnCategories.css'; // Importing external CSS file
 import Footer from './component/Footer';
 
 // Import images for each category
-import dsaImage from './dsa.png';
-import frontendImage from './frontend.jpg';
-import backendImage from './backend.jpg';
-import uiuxImage from './ui.jpg';
-import aiMlImage from './aiml.jpg';
-import databaseImage from './database.jpg';
+import dsaImage from './assets/dsa.png';
+import frontendImage from './assets/frontend.jpg';
+import backendImage from './assets/backend.jpg';
+import uiuxImage from './assets/ui.jpg';
+import aiMlImage from './assets/aiml.jpg';
+import databaseImage from './assets/database.jpg';
 
 const LearnCategories = () => {
   const [searchQuery, setSearchQuery] = useState('');

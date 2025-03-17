@@ -1,6 +1,6 @@
 import React from 'react';
 import './assets/Footer.css'; // You can create a separate CSS for Footer styling
-import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa'; // Importing social media icons
+import { FaFacebook, FaInstagram, FaGithub } from 'react-icons/fa'; // Importing social media icons
 
 const Footer = () => {
   return (

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import logo from '../logo.png'; // Assuming you have a logo image
+import logo from './assets/logo.png'; // Assuming you have a logo image
 import './style.css'; // Importing the CSS file
 import Footer from './Footer.jsx';
 
@@ -24,7 +24,7 @@ const Navbar = () => {
   const isRecursionPage = location.pathname === '/recursion';
   const isTowerOfHanoiPage = location.pathname === '/tower-of-hanoi';
   const isDatabasePage = location.pathname === '/database';
-
+  const isMCQ = location.pathname === '/mcq';
   return (
     <div>
       <div className="navbar">
@@ -65,7 +65,7 @@ const Navbar = () => {
       </div>
 
       {/* Conditionally render the "Start Your Coding Journey" Section */}
-      {!isHomePage && !isContactPage && !isAboutPage && !isLearnPage && !isTreePage && !isLoginPage && !isRegisterPage && !isRecursionPage && !isTowerOfHanoiPage && !isDatabasePage && (
+      {!isHomePage && !isContactPage && !isAboutPage && !isLearnPage && !isTreePage && !isLoginPage && !isRegisterPage && !isRecursionPage && !isTowerOfHanoiPage && !isDatabasePage && !isMCQ && (
         <div className="start-coding-journey" style={{ marginTop: '150px' }}>
           <h2>Start Your Coding Journey</h2>
           <Link to="/learn-categories">

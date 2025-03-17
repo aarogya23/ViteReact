@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./assets/Login.css"; // CSS for styling
-import logo from './art.png'
+import logo from './assets/art.png'
 
 const Login = () => {
   const [email, setEmail] = useState("");

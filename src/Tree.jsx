@@ -8,9 +8,9 @@ import fullTreeImage from './assets/full.png';
 import strictTreeImage from './assets/full.png';
 import perfectTreeImage from './assets/per.png';
 import completeTreeImage from './assets/comp.png';
-import skewed1 from './skewed1.png';
-import degenerate from './degenerate.png';
-import balanced from './balanced.png';
+import skewed1 from './assets/skewed1.png';
+import degenerate from './assets/degenerate.png';
+import balanced from './assets/balanced.png';
 
 const Tree = () => {
   const navigate = useNavigate();
