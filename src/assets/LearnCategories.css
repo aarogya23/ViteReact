@@ -113,7 +113,7 @@ h1 {
 /* Hidden hover text initially */
 .hover-text {
   display: none;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgb(0 0 0 / 0.2);
   margin-top: -5rem;
   color: white;
   padding: 10px;
@@ -243,52 +243,4 @@ h1 {
     width: 100%;
     font-size: 14px;
   }
-}
-/* Side Navigation Styles */
-.side-nav {
-  display: flex;
-  flex-direction: row;
-  width: 200px; /* Adjust the width of the side nav */
-  background-color: #333;
-  color: white;
-  position: fixed; /* Keep it fixed on the left side */
-  top: 0;
-  bottom: 0;
-  left: 0;
-  padding-top: 20px;
-}
-
-.side-nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-.side-nav li {
-  padding: 10px 20px;
-  display: flex; /* Use flexbox to align the text and arrow horizontally */
-  align-items: center; /* Center align items vertically */
-}
-
-.side-nav li a {
-  color: white;
-  text-decoration: none;
-  display: flex;
-  align-items: center; /* Aligns the text and arrow in a row */
-  justify-content: space-between; /* Space between the text and the arrow */
-  width: 100%; /* Ensure the full width is occupied */
-}
-
-.side-nav li a .arrow {
-  margin-left: 10px; /* Adds some space between the text and the arrow */
-  font-size: 18px; /* Adjust size of the arrow */
-  transition: transform 0.3s ease; /* Smooth transition for the arrow */
-}
-
-/* Hover Effect: The arrow rotates when hovering */
-.side-nav li a:hover .arrow {
-  transform: translateX(5px); /* Slightly shift the arrow to the right */
-}
-
-.side-nav li a:hover {
-  background-color: #575757;
 }

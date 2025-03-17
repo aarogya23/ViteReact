@@ -1,6 +1,7 @@
 // src/About.js
 import React from 'react';
 import './assets/About.css'; // Import CSS for styling
+import brandImage from './brand.png'; // Import your brand image
 import myImage from './image4.jpg'; // Import your main image
 import reactImage from './react.jpeg'; // Import your React-related image
 import Footer from './component/Footer';
@@ -8,6 +9,26 @@ import Footer from './component/Footer';
 const About = () => {
   return (
     <div>
+      {/* About Us Section */}
+      <div className="about-us-container">
+        <h2>About Us</h2>
+        <div className="about-us-content">
+          <div className="about-us-text">
+            <p>
+              Welcome to our website! We are a group of passionate developers and technology enthusiasts. Our goal is to create innovative solutions, share knowledge, and build a strong community of learners and professionals.
+            </p>
+            <p>
+              Through this platform, we aim to provide valuable insights, tutorials, and resources related to technology, programming, and development. Whether you're a beginner or an experienced developer, we believe everyone can contribute to the growing tech community.
+            </p>
+            <p>
+              Join us as we explore new technologies and share our journey in the world of coding, problem-solving, and development.
+            </p>
+          </div>
+          <img className="about-us-image" src={brandImage} alt="Brand Logo" />
+        </div>
+      </div>
+
+      {/* About Me Section */}
       <div className="about-container">
         <h2>About Me</h2>
         <div className="about-content">
@@ -37,7 +58,7 @@ const About = () => {
         
         {/* New React Section with Image on the Right */}
         <div className="react-section">
-          <h3 style={{textAlign : 'left'}}>Why i choose React ?</h3>
+          <h3 style={{textAlign: 'left'}}>Why I Choose React?</h3>
           <div className="react-content">
             <div className="react-text">
               <p>

@@ -108,3 +108,56 @@
 .react-image:hover {
   transform: scale(1.1); /* Image zoom effect on hover */
 }
+
+/* CSS for the About Us Section */
+.about-us-container {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #e0f7fa; /* Light blue background */
+  margin-bottom: 30px;
+  margin-left: 20px;
+  margin-right: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-us-content {
+  display: flex; /* Flexbox to align image and text horizontally */
+  align-items: center; /* Vertically align image and text */
+  flex-direction: row-reverse; /* Reverse the order: image on the right, text on the left */
+}
+
+.about-us-image {
+  width: 350px; /* Set the size of the brand image */
+  height: auto;
+  margin-left: 20px; /* Space between the image and text */
+}
+
+.about-us-text {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #333;
+  flex: 1; /* Ensure text takes up remaining space */
+}
+
+.about-us-container h2 {
+  font-size: 2em;
+  color: #0056b3;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.about-us-container p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.about-us-container a {
+  color: #0056b3;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.about-us-container a:hover {
+  text-decoration: underline;
+}
