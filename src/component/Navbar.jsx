@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import logo from './assets/logo.png'; // Assuming you have a logo image
 import './style.css'; // Importing the CSS file
-import Footer from './Footer.jsx';
 
 const Navbar = () => {
   const location = useLocation();
@@ -14,18 +13,16 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const isHomePage = location.pathname === '/home';
-  const isContactPage = location.pathname === '/contact';
-  const isAboutPage = location.pathname === '/about';
-  const isLearnPage = location.pathname === '/learn-categories';
-  const isTreePage = location.pathname === '/tree';
-  const isLoginPage = location.pathname === '/login';
-  const isRegisterPage = location.pathname === '/register';
-  const isRecursionPage = location.pathname === '/recursion';
-  const isTowerOfHanoiPage = location.pathname === '/tower-of-hanoi';
-  const isDatabasePage = location.pathname === '/database';
-  const isMCQ = location.pathname === '/mcq';
-  const isRandomFact = location.pathname === '/random-fact'
+  // List of paths to exclude from rendering the "Start Your Coding Journey" section
+  const excludePaths = [
+    '/home', '/contact', '/about', '/learn-categories', '/tree', 
+    '/login', '/register', '/recursion', '/tower-of-hanoi', 
+    '/database', '/mcq', '/random-fact', '/programming-answers'
+  ];
+
+  // Check if the current pathname is in the excludePaths array
+  const isExcludedPage = excludePaths.includes(location.pathname);
+
   return (
     <div>
       <div className="navbar">
@@ -57,6 +54,10 @@ const Navbar = () => {
           <li className="nav-item">
             <Link to="/contact" className="nav-link">Contact</Link>
           </li>
+          <li className="nav-item">
+            <Link to="/programming-answers" className="nav-link">Questions</Link>
+          </li>
+          
           <div className="nav-container">
             <li className="nav-item">
               <Link to="/login" className="nav-link">Login</Link>
@@ -66,17 +67,18 @@ const Navbar = () => {
       </div>
 
       {/* Conditionally render the "Start Your Coding Journey" Section */}
-      {!isHomePage && !isContactPage && !isAboutPage && !isLearnPage && !isTreePage && !isLoginPage && !isRegisterPage && !isRecursionPage && !isTowerOfHanoiPage && !isDatabasePage && !isMCQ && !isRandomFact && (
-        <div className="start-coding-journey" style={{ marginTop: '150px' }}>
-          <h2>Start Your Coding Journey</h2>
-          <Link to="/learn-categories">
-            <div className="button-container">
-              <button className="category-button" style={{ marginTop: '-40rem', height: '50px', width: 'auto' }}>Start Learning</button>
-            </div>
-          </Link>
+      {!isExcludedPage && (
+        <div>
+          <div className="start-coding-journey" style={{ marginTop: '150px' }}>
+            <h2>Start Your Coding Journey</h2>
+            <Link to="/learn-categories">
+              <div className="button-container">
+                <button className="category-button" style={{ marginTop: '-40rem', height: '50px', width: 'auto' }}>Start Learning</button>
+              </div>
+            </Link>
+          </div>
         </div>
       )}
-     
     </div>
   );
 };

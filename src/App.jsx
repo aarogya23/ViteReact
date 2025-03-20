@@ -14,6 +14,8 @@ import TowerOfHanoi from './TowerOfHanoi';
 import Database from './Database';
 import DSAMCQs from './DSAMCQs';  // The new MCQ page
 import RandomFactPage from './RandomFactPage .jsx'; // Import the new FrontEnd component
+import ProgrammingAnswers from './ProgrammingAnswers';
+
 function App() {
   return (
     <Router>
@@ -37,7 +39,7 @@ function App() {
             <Route path="/database" element={<Database />} /> 
             <Route path="/mcq" element={<DSAMCQs />} />  {/* New route for MCQs */}
             <Route path="/random-fact" element={<RandomFactPage />} /> {/* Add this new route */}
-         
+            <Route path="/programming-answers" element={<ProgrammingAnswers />} />
           </Routes>
         </div>
       </div>
