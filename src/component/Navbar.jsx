@@ -25,6 +25,7 @@ const Navbar = () => {
   const isTowerOfHanoiPage = location.pathname === '/tower-of-hanoi';
   const isDatabasePage = location.pathname === '/database';
   const isMCQ = location.pathname === '/mcq';
+  const isRandomFact = location.pathname === '/random-fact'
   return (
     <div>
       <div className="navbar">
@@ -65,7 +66,7 @@ const Navbar = () => {
       </div>
 
       {/* Conditionally render the "Start Your Coding Journey" Section */}
-      {!isHomePage && !isContactPage && !isAboutPage && !isLearnPage && !isTreePage && !isLoginPage && !isRegisterPage && !isRecursionPage && !isTowerOfHanoiPage && !isDatabasePage && !isMCQ && (
+      {!isHomePage && !isContactPage && !isAboutPage && !isLearnPage && !isTreePage && !isLoginPage && !isRegisterPage && !isRecursionPage && !isTowerOfHanoiPage && !isDatabasePage && !isMCQ && !isRandomFact && (
         <div className="start-coding-journey" style={{ marginTop: '150px' }}>
           <h2>Start Your Coding Journey</h2>
           <Link to="/learn-categories">

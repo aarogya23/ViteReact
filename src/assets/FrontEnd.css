@@ -1,0 +1,64 @@
+.frontend-container {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 2em;
+    color: #333;
+  }
+  
+  .subheading {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #4CAF50;
+  }
+  
+  .intro-text {
+    font-size: 1.1em;
+    margin: 10px 0;
+  }
+  
+  .code-block {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  
+  .operation-list {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .output-screen {
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre-wrap;
+  }
+  
+  .navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  
+  .back-button, .next-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .back-button:hover, .next-button:hover {
+    background-color: #45a049;
+  }
+  

@@ -44,7 +44,7 @@ const LearnCategories = () => {
       name: 'AI/ML',
       description: 'Dive into Artificial Intelligence and Machine Learning concepts to build smart applications using data-driven approaches.',
       image: aiMlImage,
-      link: '/frontend'
+      link: '/random-fact'
     },
     {
       name: 'Database',

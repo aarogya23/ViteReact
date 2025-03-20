@@ -13,7 +13,7 @@ import Recursion from "./Recursion";
 import TowerOfHanoi from './TowerOfHanoi';
 import Database from './Database';
 import DSAMCQs from './DSAMCQs';  // The new MCQ page
-
+import RandomFactPage from './RandomFactPage .jsx'; // Import the new FrontEnd component
 function App() {
   return (
     <Router>
@@ -36,6 +36,8 @@ function App() {
             <Route path="/tower-of-hanoi" element={<TowerOfHanoi />} />
             <Route path="/database" element={<Database />} /> 
             <Route path="/mcq" element={<DSAMCQs />} />  {/* New route for MCQs */}
+            <Route path="/random-fact" element={<RandomFactPage />} /> {/* Add this new route */}
+         
           </Routes>
         </div>
       </div>
